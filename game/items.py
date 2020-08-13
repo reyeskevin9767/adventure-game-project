@@ -12,8 +12,10 @@ class Item():
 
 
 class Gold(Item):
+    """ Subclass of Item """
     def __init__(self, amount):
         self.amount = amount
         super().__init__(name="Gold",
-                         description="A Round Coin With {self.amount} stamped on the front.",
+                         description=f"A Round Coin With {self.amount} stamped on the front.",
                          value=self.amount)
+

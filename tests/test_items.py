@@ -1,27 +1,21 @@
 import unittest
-from game.items import Item
+from game.items import Item, Gold
 
 # * Testing Items
-
-
 class BaseItemCases:
     class ItemTests(unittest.TestCase):
-        def setUp(self):
-            self.money = Item("Coin", 'A Gold Coin', 2)
-
-        def test_init(self):
-            self.assertEqual(self.money.name, 'Coin')
-            self.assertEqual(self.money.description, 'A Gold Coin')
-            self.assertEqual(self.money.value, 2)
-
         def test_str(self):
-            self.assertIsNotNone(str(self.money))
+            self.assertIsNotNone(str(self))
 
 
 class GoldTests(BaseItemCases.ItemTests):
+    def setUp(self):
+        self.gold = Gold(3)
+
     def test_init(self):
-        self.amount = 2
-        self.assertEqual(self.money.value, self.amount)
+        self.assertEqual(self.gold.name, 'Gold')
+        self.assertEqual(self.gold.description, "A Round Coin With 3 stamped on the front.")
+        self.assertEqual(self.gold.value, 3)
 
 
 # python -m unittest tests/test_items.py
