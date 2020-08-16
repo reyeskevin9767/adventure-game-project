@@ -56,7 +56,7 @@ class GlovesWeaponTests(WeaponTests):
         self.assertEqual(self.gloves.description,
                          'Regular pair of gloves. All its power comes from you.')
         self.assertEqual(self.gloves.value, 0)
-        self.assertEqual(self.gloves.damage, 5)
+        self.assertEqual(self.gloves.damage, 10)
 
 
 class SwordWeaponTests(WeaponTests):
@@ -70,7 +70,7 @@ class SwordWeaponTests(WeaponTests):
         self.assertEqual(self.sword.description,
                          'A sword typically used for training. Better than using your fists.')
         self.assertEqual(self.sword.value, 5)
-        self.assertEqual(self.sword.damage, 10)
+        self.assertEqual(self.sword.damage, 15)
 
 
 class DraggerWeaponTests(WeaponTests):
@@ -84,7 +84,7 @@ class DraggerWeaponTests(WeaponTests):
         self.assertEqual(self.dragger.description,
                          'A small dagger with some rust. Be better if you could throw the dragger.')
         self.assertEqual(self.dragger.value, 10)
-        self.assertEqual(self.dragger.damage, 15)
+        self.assertEqual(self.dragger.damage, 20)
 
 
 class AxeWeaponTests(WeaponTests):
@@ -112,7 +112,7 @@ class NightSwordWeaponTests(WeaponTests):
         self.assertEqual(self.night_sword.description,
                          'A black sword with a snake style blade that deals deadly damage.')
         self.assertEqual(self.night_sword.value, 25)
-        self.assertEqual(self.night_sword.damage, 35)
+        self.assertEqual(self.night_sword.damage, 30)
 
 
 # python -m unittest tests/test_items.py

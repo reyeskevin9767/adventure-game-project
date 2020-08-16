@@ -2,10 +2,10 @@ from player import Player
 
 
 class Action():
-    """The base class for all actions"""
+    """ The base class for all actions """
 
     def __init__(self, method, name, hotkey, **kwargs):
-        """Creates a new action """
+        """ Creates a new action """
         self.method = method
         self.hotkey = hotkey
         self.name = name
@@ -16,6 +16,7 @@ class Action():
 
 
 class MoveUp(Action):
+    """ Move North """
     def __init__(self):
         super().__init__(
             method=Player.move_up,
@@ -24,6 +25,7 @@ class MoveUp(Action):
 
 
 class MoveRight(Action):
+    """ Move East """
     def __init__(self):
         super().__init__(
             method=Player.move_right,
@@ -32,6 +34,7 @@ class MoveRight(Action):
 
 
 class MoveDown(Action):
+    """ Move South """
     def __init__(self):
         super().__init__(
             method=Player.move_down,
@@ -40,11 +43,20 @@ class MoveDown(Action):
 
 
 class MoveLeft(Action):
+    """ Move West """
     def __init__(self):
         super().__init__(
             method=Player.move_left,
             name='Move West',
             hotkey='a')
+
+class QuitGame(Action):
+    """ Exit Game """
+    def __init__(self):
+        super().__init__(
+            method=Player.quit_game,
+            name='Quit Game',
+            hotkey='q')
 
 
 class ViewInventory(Action):
@@ -58,6 +70,7 @@ class ViewInventory(Action):
 
 
 class Attack(Action):
+    """ Attack Enemy """
     def __init__(self, enemy):
         super().__init__(
             method=Player.attack,
@@ -68,6 +81,7 @@ class Attack(Action):
 
 class Flee(Action):
     def __init__(self, tile):
+        """ Free From Enemy """
         super().__init__(
             method=Player.flee,
             name="Flee",

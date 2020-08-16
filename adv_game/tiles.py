@@ -35,6 +35,7 @@ class MapTile:
         """ Returns all of the available actions on current tile """
         moves = self.adjacent_moves()
         moves.append(actions.ViewInventory())
+        moves.append(actions.QuitGame())
 
         return moves
 

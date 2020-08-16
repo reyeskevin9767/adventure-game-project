@@ -3,6 +3,7 @@ import items, world
 
 
 class Player():
+    """ The base class for player """
     def __init__(self):
         self.inventory = [items.Gold(15), items.Crystals(1), items.Gloves()]
         self.hp = 150
@@ -18,10 +19,12 @@ class Player():
             action_method(**kwargs)
 
     def print_inventory(self):
+        """ Print Out Current Inventory """
         for item in self.inventory:
             print(item, '\n')
 
     def move(self, dx, dy):
+        """ Player Moves Around The Map """
         self.location_x += dx
         self.location_y += dy
         print(world.tile_exists(self.location_x, self.location_y).intro_text())
@@ -37,6 +40,9 @@ class Player():
 
     def move_right(self):
         self.move(dx=-1, dy=0)
+
+    def quit_game(self):
+        return quit();
 
     def attack(self, enemy):
         best_weapon = None
