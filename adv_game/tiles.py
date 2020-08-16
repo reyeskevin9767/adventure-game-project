@@ -60,6 +60,8 @@ class StartingRoom(MapTile):
 
 
 class ExitRoom(MapTile):
+    """ End Tile """
+
     def intro_text(self):
         return """
         You keep walking until you notice a sign that points to the nearest town. 
