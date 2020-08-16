@@ -1,5 +1,5 @@
-import game.items
-import game.enemies
+import items
+import enemies
 
 
 class MapTile:

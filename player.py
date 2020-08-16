@@ -1,6 +1,6 @@
 import random
-import game.items
-import game.world
+import items
+import world
 
 
 class Player():

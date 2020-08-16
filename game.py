@@ -1,5 +1,5 @@
-import game.world
-from game.player import Player
+import world
+from player import Player
 
 
 def play():

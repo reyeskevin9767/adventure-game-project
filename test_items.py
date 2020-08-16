@@ -1,5 +1,5 @@
 import unittest
-from game.items import Item, Gold, Crystals, Weapon, Gloves, Sword, Dragger, Axe, NightSword
+from items import Item, Gold, Crystals, Weapon, Gloves, Sword, Dragger, Axe, NightSword
 
 # * Testing Items
 
