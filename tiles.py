@@ -32,6 +32,8 @@ class MapTile:
         if world.tile_exists(self.x, self.y + 1):
             moves.append(actions.MoveDown())
 
+        return moves
+
     def available_actions(self):
         """ Returns all of the available actions on current tile """
         moves = self.adjacent_moves()
