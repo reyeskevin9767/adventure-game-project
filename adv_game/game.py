@@ -18,12 +18,13 @@ def play():
             print("Choose an action:\n")
             available_actions = room.available_actions()
             for action in available_actions:
-                print(colored(action, color="blue"))
+                print(colored(action, color="cyan"))
             action_input = input('\nAction: ')
             for action in available_actions:
                 if action_input == action.hotkey:
                     player.do_action(action, **action.kwargs)
                     break
+    print(colored('You Have Died', color="red"))
 
 
 if __name__ == "__main__":

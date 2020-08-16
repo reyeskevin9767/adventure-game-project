@@ -48,6 +48,7 @@ class Player():
         self.move(dx=-1, dy=0)
 
     def quit_game(self):
+        print(colored("You Have Quit The Game", color="red"))
         return quit()
 
     def attack(self, enemy):
