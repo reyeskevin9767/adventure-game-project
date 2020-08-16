@@ -30,6 +30,16 @@ class StartingRoom(MapTile):
         pass
 
 
+class ExitRoom(MapTile):
+    def intro_text(self):
+        return """
+        You keep walking until you notice a sign that points to the nearest town. 
+        You start making a mad dash to civilization. """
+
+    def modify_player(self, player):
+        player.victory = True
+
+
 class EmptyBeachPath(MapTile):
     def intro_text(self):
         return """
