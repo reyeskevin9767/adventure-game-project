@@ -117,9 +117,9 @@ class LootRoom(MapTile):
         player.inventory.append(self.item)
 
 
-class FindGoodRoom(LootRoom):
+class FindFiveGoodRoom(LootRoom):
     def __init__(self, x, y):
-        super().__init__(x, y, items.Gold())
+        super().__init__(x, y, items.Gold(5))
 
     def intro_text(self):
         return """
@@ -127,9 +127,9 @@ class FindGoodRoom(LootRoom):
         """
 
 
-class FindCrystalsRoom(LootRoom):
+class FindOneCrystalsRoom(LootRoom):
     def __init__(self, x, y):
-        super().__init__(x, y, items.Crystals())
+        super().__init__(x, y, items.Crystals(1))
 
     def intro_text(self):
         return """

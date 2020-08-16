@@ -4,7 +4,7 @@ import items, world
 
 class Player():
     def __init__(self):
-        self.inventory = [items.Gold(15), items.Rock()]
+        self.inventory = [items.Gold(15), items.Gloves()]
         self.hp = 100
         self.location_x, self.location_y = world.starting_position
         self.victory = False
@@ -26,16 +26,16 @@ class Player():
         self.location_y += dy
         print(world.tile_exists(self.location_x, self.location_y).intro_text())
 
-    def move_north(self):
+    def move_up(self):
         self.move(dx=0, dy=-1)
 
-    def move_south(self):
+    def move_down(self):
         self.move(dx=0, dy=1)
 
-    def move_east(self):
+    def move_left(self):
         self.move(dx=1, dy=0)
 
-    def move_west(self):
+    def move_right(self):
         self.move(dx=-1, dy=0)
 
     def attack(self, enemy):

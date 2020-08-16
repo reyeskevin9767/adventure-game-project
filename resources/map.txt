@@ -1,10 +1,9 @@
-EmptyDesertPath	
-	Find5GoldRoom	EmptyCavePath	GiantSpiderRoom	EmptyCavePath
-		EmptyCavePath		
-		EmptyCavePath		
-GiantSpiderRoom	EmptyCavePath	StartingRoom	EmptyCavePath	FindDaggerRoom
-		Find5GoldRoom		
-		EmptyCavePath	OgreRoom	Find5GoldRoom		
-		SnakePitRoom		
-
-
+FindNightSwordRoom	StormGhoul	FindFiveGoodRoom	FindOneCrystalsRoom	EmptySnowPath	FindFiveGoodRoom	FindAxeRoom
+StormGhoul	StormGhoul	FindSwordRoom	FindOneCrystalsRoom	StormGhoul	DreadFiend	EmptySnowPath
+DreadFiend	EmptySnowPath	FindGlovesRoom	EmptySnowPath	FindDraggerRoom	FellwoodSpectre	FindOneCrystalsRoom
+FellwoodSpectre	StormGhoul	EmptyDesertPath	FindGlovesRoom	EmptySnowPath	FindFiveGoodRoom	EmptyBeachPath
+FindOneCrystalsRoom	FindFiveGoodRoom	EmptyDesertPath	StartingRoom	FellwoodSpectre	FindOneCrystalsRoom	DreadFiend
+StormGhoul	EmptyDesertPath	FellwoodSpectre	EmptyForestPath	FindFiveGoodRoom	EmptyBeachPath	FindAxeRoom
+EmptyDesertPath	EmptyDesertPath	FindSwordRoom	FellwoodSpectre	EmptyForestPath	DreadFiend	EmptyBeachPath
+ScarletHydra	ScarletHydra	EmptyForestPath	EmptyForestPath	FindOneCrystalsRoom	StormGhoul	StormGhoul
+ExitRoom	ScarletHydra	FellwoodSpectre	FindFiveGoodRoom	EmptyForestPath	StormGhoul	FindNightSwordRoom
