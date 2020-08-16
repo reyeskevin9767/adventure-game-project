@@ -1,2 +1,10 @@
-EmptyBeachPath		EmptyBeachPath		StartingRoom		EmptyBeachPath		EmptyBeachPath
+EmptyDesertPath	
+	Find5GoldRoom	EmptyCavePath	GiantSpiderRoom	EmptyCavePath
+		EmptyCavePath		
+		EmptyCavePath		
+GiantSpiderRoom	EmptyCavePath	StartingRoom	EmptyCavePath	FindDaggerRoom
+		Find5GoldRoom		
+		EmptyCavePath	OgreRoom	Find5GoldRoom		
+		SnakePitRoom		
+
 
