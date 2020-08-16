@@ -24,11 +24,11 @@ class MoveUp(Action):
             hotkey='w')
 
 
-class MoveRight(Action):
+class MoveLeft(Action):
     """ Move East """
     def __init__(self):
         super().__init__(
-            method=Player.move_right,
+            method=Player.move_left,
             name='Move East',
             hotkey='d')
 
@@ -42,11 +42,11 @@ class MoveDown(Action):
             hotkey='s')
 
 
-class MoveLeft(Action):
+class MoveRight(Action):
     """ Move West """
     def __init__(self):
         super().__init__(
-            method=Player.move_left,
+            method=Player.move_right,
             name='Move West',
             hotkey='a')
 

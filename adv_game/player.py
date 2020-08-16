@@ -1,9 +1,14 @@
 import random
-import items, world
+import items
+import world
+from termcolor import colored
+from colorama import init
+init()
 
 
 class Player():
     """ The base class for player """
+
     def __init__(self):
         self.inventory = [items.Gold(15), items.Crystals(1), items.Gloves()]
         self.hp = 150
@@ -21,13 +26,14 @@ class Player():
     def print_inventory(self):
         """ Print Out Current Inventory """
         for item in self.inventory:
-            print(item, '\n')
+            print(colored(item, color='cyan'), '\n')
 
     def move(self, dx, dy):
         """ Player Moves Around The Map """
         self.location_x += dx
         self.location_y += dy
-        print(world.tile_exists(self.location_x, self.location_y).intro_text())
+        print(colored(world.tile_exists(self.location_x,
+                                        self.location_y).intro_text(), color='green'))
 
     def move_up(self):
         self.move(dx=0, dy=-1)
@@ -42,7 +48,7 @@ class Player():
         self.move(dx=-1, dy=0)
 
     def quit_game(self):
-        return quit();
+        return quit()
 
     def attack(self, enemy):
         best_weapon = None
@@ -52,12 +58,13 @@ class Player():
                 if i.damage > max_dmg:
                     max_dmg = i.damage
                     best_weapon = i
-        print(f"You use {best_weapon.name} against {enemy.name}.")
+        print(
+            colored(f"\nYou use {best_weapon.name} against {enemy.name}.", color="green"))
         enemy.hp -= best_weapon.damage
         if not enemy.is_alive():
-            print(f"You killed {enemy.name}.")
+            print(colored(f"\nYou killed {enemy.name}.\n", color='green'))
         else:
-            print(f"{enemy.name} HP is {enemy.hp}")
+            print(colored(f"\n{enemy.name} HP is {enemy.hp}.", color='red'))
 
     def flee(self, tile):
         """ Moves the player randomly to an adjacent tile """

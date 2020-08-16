@@ -1,4 +1,10 @@
-import items, enemies, actions, world
+import items
+import enemies
+import actions
+import world
+from termcolor import colored
+from colorama import init
+init()
 
 
 class MapTile:
@@ -116,9 +122,10 @@ class LootRoom(MapTile):
 
     def add_loot(self, player):
         player.inventory.append(self.item)
-        
+
     def modify_player(self, the_player):
         self.add_loot(the_player)
+
 
 class FindFiveGoodRoom(LootRoom):
     def __init__(self, x, y):
@@ -197,11 +204,11 @@ class EnemyRoom(MapTile):
         self.enemy = enemy
         super().__init__(x, y)
 
-    def modify_player(self,player):
+    def modify_player(self, player):
         if self.enemy.is_alive():
             player.hp = player.hp - self.enemy.damage
             print(
-                f"Enemy does {self.enemy.damage}. You have {player.hp} HP remaining ")
+                colored(f"\nEnemy does {self.enemy.damage}. You have {player.hp} HP remaining.\n", color="red"))
 
     def available_actions(self):
         if self.enemy.is_alive():
