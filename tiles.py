@@ -1,5 +1,7 @@
 import items
 import enemies
+import actions
+import world
 
 
 class MapTile:
@@ -11,10 +13,31 @@ class MapTile:
 
     # Warning if a MapTile is created directly
     def intro_text(self):
+        """Information to be displayed when the player moves into this tile."""
         raise NotImplementedError()
 
     def modify_player(self, player):
+        """Process actions that change the state of the player."""
         raise NotImplementedError()
+
+    def adjacent_moves(self):
+        """ Returns all move actions for adjacent tiles """
+        moves = []
+        if world.tile_exists(self.x + 1, self.y):
+            moves.append(actions.MoveLeft())
+        if world.tile_exists(self.x - 1, self.y):
+            moves.append(actions.MoveRight())
+        if world.tile_exists(self.x, self.y - 1):
+            moves.append(actions.MoveUp())
+        if world.tile_exists(self.x, self.y + 1):
+            moves.append(actions.MoveDown())
+
+    def available_actions(self):
+        """ Returns all of the available actions on current tile """
+        moves = self.adjacent_moves()
+        moves.append(actions.ViewInventory())
+
+        return moves
 
 
 class StartingRoom(MapTile):
