@@ -116,6 +116,6 @@ class NightSwordWeaponTests(WeaponTests):
 
 
 # python -m unittest tests/test_items.py
-# python -m unittest discover -v
+# python -m unittest discover
 if __name__ == '__main__':
     unittest.main()
