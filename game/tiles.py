@@ -168,6 +168,12 @@ class EnemyRoom(MapTile):
             print(
                 f"Enemy does {self.enemy.damage}. You have {self.player.hp} HP remaining ")
 
+    def available_actions(self):
+        if self.enemy.is_action():
+            return [actions.Flee(tile=self), actions.Attack(enemy=self.enemy)]
+        else:
+            return self.adjacent_moves()
+
 
 class FellwoodSpectre(EnemyRoom):
     def __init__(self, x, y):
@@ -227,4 +233,3 @@ class ScarletHydra(EnemyRoom):
             return """
             The monster lays on the motionless as several heads are missing.
             """
-
