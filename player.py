@@ -1,6 +1,5 @@
 import random
-import items
-import world
+import items, world
 
 
 class Player():
