@@ -6,8 +6,8 @@ class Enemy:
         self.hp = hp
         self.damage = damage
 
-        def is_alive(self):
-            return self.hp > 0
+    def is_alive(self):
+        return self.hp > 0
 
 
 class FellwoodSpectre(Enemy):

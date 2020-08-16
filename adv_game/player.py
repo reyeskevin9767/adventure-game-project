@@ -4,8 +4,8 @@ import items, world
 
 class Player():
     def __init__(self):
-        self.inventory = [items.Gold(15), items.Gloves()]
-        self.hp = 100
+        self.inventory = [items.Gold(15), items.Crystals(1), items.Gloves()]
+        self.hp = 150
         self.location_x, self.location_y = world.starting_position
         self.victory = False
 

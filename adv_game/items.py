@@ -6,8 +6,8 @@ class Item():
         self.description = description
         self.value = value
 
-        def __str__(self):
-            return "{self.name}\n=====\n{self.description}\nValue: {self.value}\n"
+    def __str__(self):
+        return f"{self.name}\n=====\n{self.description}\nValue: {self.value}\n"
 
 
 class Gold(Item):
@@ -37,8 +37,8 @@ class Weapon(Item):
         self.damage = damage
         super().__init__(name, description, value)
 
-        def __str__(self):
-            return f"{self.name}\n=====\nValue: {self.value}\nDamage: {self.damage}"
+    def __str__(self):
+        return f"{self.name}\n=====\nValue: {self.value}\nDamage: {self.damage}"
 
 
 class Gloves(Weapon):
@@ -48,7 +48,7 @@ class Gloves(Weapon):
         super().__init__(name="Gloves",
                          description="Regular pair of gloves. All its power comes from you.",
                          value=0,
-                         damage=5)
+                         damage=10)
 
 
 class Sword(Weapon):
@@ -58,7 +58,7 @@ class Sword(Weapon):
         super().__init__(name="Wood Sword",
                          description="A sword typically used for training. Better than using your fists.",
                          value=5,
-                         damage=10)
+                         damage=15)
 
 
 class Dragger(Weapon):
@@ -68,7 +68,7 @@ class Dragger(Weapon):
         super().__init__(name="Rusty Dragger",
                          description="A small dagger with some rust. Be better if you could throw the dragger.",
                          value=10,
-                         damage=15)
+                         damage=20)
 
 
 class Axe(Weapon):
@@ -88,4 +88,4 @@ class NightSword(Weapon):
         super().__init__(name="Night's Edge",
                          description="A black sword with a snake style blade that deals deadly damage.",
                          value=25,
-                         damage=35)
+                         damage=30)
