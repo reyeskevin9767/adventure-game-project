@@ -2,6 +2,8 @@ import unittest
 from enemies import Enemy, FellwoodSpectre, StormGhoul, DreadFiend, ScarletHydra
 
 # * Testing Enemy
+
+
 class BaseEnemyCases:
     class EnemyTests(unittest.TestCase):
         """ Testing Enemy Template """
