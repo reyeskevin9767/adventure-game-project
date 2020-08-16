@@ -1,7 +1,4 @@
-import items
-import enemies
-import actions
-import world
+import items, enemies, actions, world
 
 
 class MapTile:

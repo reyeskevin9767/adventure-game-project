@@ -14,8 +14,8 @@ class Player():
 
     def do_action(self, action, **kwargs):
         action_method = getattr(self, action.method.__name__)
-    if action_method:
-        action_method(**kwargs)
+        if action_method:
+            action_method(**kwargs)
 
     def print_inventory(self):
         for item in self.inventory:

@@ -1,4 +1,4 @@
-import player
+from player import Player
 
 
 class Action():

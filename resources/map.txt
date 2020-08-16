@@ -1,5 +1,2 @@
-EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath
-EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath
-EmptyBeachPath  EmptyBeachPath  StartingRoom  EmptyBeachPath  EmptyBeachPath
-EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath
-EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath  EmptyBeachPath
+EmptyBeachPath		EmptyBeachPath		StartingRoom		EmptyBeachPath		EmptyBeachPath
+
