@@ -2,7 +2,10 @@ import player
 
 
 class Action():
+    """The base class for all actions"""
+
     def __init__(self, method, name, hotkey, **kwargs):
+        """Creates a new action """
         self.method = method
         self.hotkey = hotkey
         self.name = name
